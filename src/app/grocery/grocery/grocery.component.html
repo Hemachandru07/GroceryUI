@@ -1,0 +1,28 @@
+<div class="container">
+    <br/>
+    <h1 style="text-align: center;">Grocery Shop</h1>
+    <br/>
+    <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Grocery Name</th>
+            <th>Price</th>
+            <th>Stock</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let groceries of grocery">
+            <td>{{groceries.groceryName}}</td>
+            <td>{{groceries.price}}</td>
+            <td>{{groceries.stock}}</td>
+            <td>
+                <a [routerLink]="['edit', groceries.groceryID]">Edit</a>
+              </td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="mb-3">
+        <button class="btn btn-primary" [routerLink]="['add']">Add Grocery</button>
+      </div>
+
+</div>

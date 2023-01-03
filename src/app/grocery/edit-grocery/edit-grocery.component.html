@@ -1,0 +1,28 @@
+<div class="container" *ngIf="grocery">
+    <br/>
+    <h1>Edit Grocery</h1>
+    <br/>
+    <form #form="ngForm" (ngSubmit)="onSubmit()">
+      <div class="mb-3">
+        <label class="form-label">Grocery Id</label>
+        <input type="text" class="form-control" name="id" [(ngModel)]="grocery.groceryID" readonly>
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Grocery Name</label>
+        <input type="text" class="form-control" name="name" [(ngModel)]="grocery.groceryName">
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Price</label>
+        <input type="text" class="form-control" name="price" [(ngModel)]="grocery.price">
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Stock</label>
+        <input class="form-control" name="stock" [(ngModel)]="grocery.stock">
+      </div>
+      <div class="mb-3">
+        <button class="btn btn-primary">Save</button>
+        <a class="btn btn-danger" style="margin-left:20px;" (click)="onDelete()">Delete</a>
+        <a class="btn btn-danger" style="margin-left:20px;" routerLink="/grocery">Cancel</a>
+      </div>
+    </form>
+  </div>

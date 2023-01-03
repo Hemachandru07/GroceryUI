@@ -1,0 +1,47 @@
+<section class="vh-100 bg-image"
+  style="background-image: url('https://mdbcdn.b-cdn.net/img/Photos/new-templates/search-box/img4.webp');">
+  <div class="mask d-flex align-items-center h-100 gradient-custom-3">
+    <div class="container h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-12 col-md-9 col-lg-7 col-xl-6">
+          <div class="card" style="border-radius: 15px;">
+            <div class="card-body p-3">
+              <h2 class="text-uppercase text-center mb-5">Create an account</h2>
+              <form #form="ngForm" (ngSubmit)="onSubmit()">
+                <div class="mb-3">
+                  <label class="form-label">Name</label>
+                  <input type="text" class="form-control" name="name" [(ngModel)]="customer.customerName">
+                </div>
+                <div class="mb-3">
+                  <label class="form-label">Email</label>
+                  <input type="text" class="form-control" name="email" [(ngModel)]="customer.customerEmail">
+                </div>
+                <div class="mb-3">
+                  <label class="form-label">Contact Number</label>
+                  <input class="form-control" name="number" [(ngModel)]="customer.mobileNumber">
+                </div>
+                <div class="mb-3">
+                  <label class="form-label">Address</label>
+                  <input class="form-control" name="address" [(ngModel)]="customer.address">
+                </div>
+                <div class="mb-3">
+                  <label class="form-label">Password</label>
+                  <input type="password" class="form-control" name="password" [(ngModel)]="customer.password">
+                </div>
+                <div class="mb-3">
+                  <label class="form-label">Confirm Password</label>
+                  <input type="password" class="form-control" name="cpassword" [(ngModel)]="customer.cPassword">
+                </div>
+                <div class="mb-3">
+                  <button class="btn btn-primary">Register</button>
+                  <a class="btn btn-danger" style="margin-left:20px;" routerLink="">Cancel</a>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
